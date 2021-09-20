@@ -1,11 +1,11 @@
 package com.servlet;
 
 import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import com.user.Student;
 
@@ -32,9 +32,9 @@ public class GpaServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-		String grade 1 = request.getParameter("gradeOne");
-		String grade 2 = request.getParameter("gradeTwo");
-		String grade 3 = request.getParameter("gradeThree");
+		String grade1 = request.getParameter("gradeOne");
+		String grade2 = request.getParameter("gradeTwo");
+		String grade3 = request.getParameter("gradeThree");
 		
 		int credit = 12;
 		
@@ -50,7 +50,7 @@ public class GpaServlet extends HttpServlet {
 		RequestDispatcher rs = request.getRequestDispatcher("account.jsp");
 			rs.forward(request, response);
 	}
-	}
+	
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -59,6 +59,6 @@ public class GpaServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 		
-		
+	}
 
 }
